@@ -1,0 +1,37 @@
+﻿
+@model List<String>
+
+
+@{
+    ViewData["Title"] = "MyAction";
+}
+
+<h2>This is my action page</h2>
+
+<h3>Page title is @ViewData["Title"]</h3>
+
+<p> Some data received from the back end is @ViewBag.MyItem and also @ViewData["AnotherItem"]</p>
+
+
+<ul>
+    @for (int i = 0; i < 5; i++)
+    {
+        <li>Your item is @i</li>
+    }
+</ul>
+
+<ul>
+   @foreach (var item in ViewBag.mylist)
+   {
+       <li>item is @item</li>
+   }
+</ul>
+
+<h2>Now lets try as a model</h2>
+<ul>
+    
+    @foreach (var item in @Model)
+    {
+        <li>@item</li>
+    }
+</ul>

@@ -1,0 +1,11 @@
+﻿@model List<String>
+   @{ ViewData["Title"] = "MyData";
+
+   }
+
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item</li>
+        }
+    </ul>
